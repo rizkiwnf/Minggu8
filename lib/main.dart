@@ -1,9 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:statemanagementp2/main_screen.dart';
 import 'package:statemanagementp2/provider/done_tourism_provider.dart';
 
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(const MyApp());
+// }
 void main() {
   runApp(const MyApp());
 }
@@ -17,10 +23,9 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => DoneTourismProvider(),
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
         title: 'Contacts',
         theme: ThemeData(),
-        home: MainScreen(),
+        home: const MainScreen(),
       ),
     );
   }
